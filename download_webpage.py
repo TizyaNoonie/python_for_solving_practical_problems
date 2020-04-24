@@ -1,7 +1,19 @@
+# 1.1 Скачивание web-страниц
 import requests as rq
 
-url = r"https://ru.wikipedia.org/wiki/Python"
+url = r"https://stepik.org/media/attachments/lesson/209717/1.html"
 
-req = rq.get(url)
-web_page = req.text
-print(web_page)
+
+def most_freqent(url):
+    req = rq.get(url)
+    source_code = req.text
+    python_count = source_code.count("Python")
+    c_plusplus_count = source_code.count("C++")
+    print(python_count, c_plusplus_count)
+    if python_count > c_plusplus_count:
+        return "Python"
+    else:
+        return "C++"
+
+
+print(most_freqent(url))
