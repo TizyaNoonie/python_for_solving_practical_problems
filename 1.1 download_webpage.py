@@ -12,8 +12,9 @@ def most_freqent(url):
     print(python_count, c_plusplus_count)
     if python_count > c_plusplus_count:
         return "Python"
-    else:
+    elif python_count < c_plusplus_count:
         return "C++"
+    return "Equal count"
 
 
-print(most_freqent(url))
+print(most_freqent(url))  # C++
