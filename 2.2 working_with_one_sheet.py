@@ -21,13 +21,11 @@ for salary in salaries:
     key, value = salary[0], salary[1:]
     avg_salary[key] = sum(value) / len(value)
 
-# print(sorted(avg_salary, key=lambda k: avg_salary[k], reverse=True))
+print(sorted(avg_salary, key=lambda k: avg_salary[k], reverse=True))
 
 salary_for_specialist = {}
 keys = all_data[0][1:]
 salaries = all_data[1:]
-for element in all_data:
-    print(element)
 
 index = 1
 for key in keys:
